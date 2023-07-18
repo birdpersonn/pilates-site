@@ -15,11 +15,11 @@ const Home = ({ setSelectedPage }: Props) => {
         className="gap-16 bg-gray-20 py-10 md:h-full md:align-middle"
     >
         <motion.div
-            className='flex flex-col md:flex-row mx-auto w-5/6 md:h-full justify-center items-center'
+            className='flex flex-col md:flex-row mx-auto w-5/6 md:h-5/6 justify-center items-center'
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
             {/* MAIN HEADER */}
-            <div className='z-10 mt-32 md:basis-auto sm:items-center'>
+            <div className='z-10 mt-32 md:basis-3/5'>
                 {/* HEADINGS */}
                 <motion.div
                     className='md:-mt-20'
