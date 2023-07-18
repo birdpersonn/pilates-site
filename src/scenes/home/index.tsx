@@ -12,11 +12,11 @@ type Props = {
 const Home = ({ setSelectedPage }: Props) => {
     return <section
         id="home"
-        className="gap-16 bg-gray-20 py-10 md:full-height md:pb-0"
+        className="gap-16 bg-gray-20 py-10 md:h-full md:align-middle"
     >
-        <div className='flex flex-col md:flex-row mx-auto w-5/6 items-center justify-center'>
+        <div className='flex flex-col md:flex-row mx-auto w-5/6 md:h-full justify-center items-center'>
             {/* MAIN HEADER */}
-            <div className='z-10 mt-32 md:basis-full sm:items-center'>
+            <div className='z-10 mt-32 md:basis-auto sm:items-center'>
                 {/* HEADINGS */}
                 <motion.div
                     className='md:-mt-20'
@@ -74,7 +74,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
             {/* IMAGE */}
             <div className='flex basis-4/5 justify-center z-10 
-                md:ml-40 md:mt-16 md:justify-items-end pt-6'
+                md:ml-40 md:mt-16 pt-6'
             >
                 <img src={HomePageGraphic} alt="home-page-graphic" />
             </div>
