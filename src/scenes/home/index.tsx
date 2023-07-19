@@ -19,7 +19,7 @@ const Home = ({ setSelectedPage }: Props) => {
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
             {/* MAIN HEADER */}
-            <div className='z-10 mt-32 md:basis-3/5'>
+            <div className='z-10 mt-32 md:basis'>
                 {/* HEADINGS */}
                 <motion.div
                     className='md:-mt-20'
@@ -77,7 +77,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
             {/* IMAGE */}
             <div className='flex basis-4/5 justify-center z-10 
-                md:ml-40 md:mt-16 pt-6'
+                md:ml-40 pt-20'
             >
                 <img src={HomePageGraphic} alt="home-page-graphic" />
             </div>
