@@ -5,6 +5,7 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
     isTopOfPage: boolean;
@@ -16,23 +17,23 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between";
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-    const navBarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow"
+    const navBarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
     return (
         <nav>
             <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
-                        <img src={Logo} alt="logo" />
+                        <AnchorLink
+                            href={"#home"}
+                            onClick={() => setSelectedPage(SelectedPage.Home)}
+                        >
+                            <img src={Logo} alt="logo" />
+                        </AnchorLink>
 
                         {isAboveMediumScreens ? (
                             <div className={`${flexBetween} w-full`}>
                                 <div className={`${flexBetween} gap-8 text-sm`}>
-                                    <Link
-                                        page="Home"
-                                        selectedPage={selectedPage}
-                                        setSelectedPage={setSelectedPage}
-                                    />
                                     <Link
                                         page="Benefits"
                                         selectedPage={selectedPage}
